@@ -9,7 +9,7 @@ fs = require('fs')
 // fs.readFileSync, Buffer.toString,
 var txtindex = fs.readFileSync( "index.html")
 var str = new Buffer( txtindex)
-responde.send( str.toString())
+response.send( str.toString())
 
   // response.send('Hello World 3!')
 })
