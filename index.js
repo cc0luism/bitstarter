@@ -5,7 +5,13 @@ app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(request, response) {
-  response.send('Hello World 3!')
+fs = require('fs')
+// fs.readFileSync, Buffer.toString,
+var txtindex = fs.readFileSync( "index.html")
+var str = new Buffer( txtindex)
+responde.send( str.toString())
+
+  // response.send('Hello World 3!')
 })
 
 app.listen(app.get('port'), function() {
